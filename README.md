@@ -21,13 +21,12 @@ Before using any other command, set your API key:
 
 The api key is saved on the same directory as `gemini-cli`.
 
-| **Argument**             | **Description**                 | **Usage**                       |
-| ------------------------ | ------------------------------- | ------------------------------- |
-| -h / --help              | Show help message               | `./gemini-cli -h`               |
-| -a / --ask               | Ask a question                  | `./gemini-cli -a <question>`    |
-| -k / --keyfile           | Set or Update the API key       | `./gemini-cli -k <api_key>`     |
-| -s / --show-instructions | Display current AI instructions | `./gemini-cli -s`               |
-| -i / --add-instruction   | Add additional AI instruction   | `./gemini-cli -i <instruction>` |
+| **Argument**             | **Description**                 | **Usage**                    |
+| ------------------------ | ------------------------------- | ---------------------------- |
+| -h / --help              | Show help message               | `./gemini-cli -h`            |
+| -a / --ask               | Ask a question                  | `./gemini-cli -a <question>` |
+| -k / --keyfile           | Set or Update the API key       | `./gemini-cli -k <api_key>`  |
+| -s / --show-instructions | Display current AI instructions | `./gemini-cli -s`            |
 
 You then can use `./gemini-cli` with the following available arguments:
 
@@ -35,10 +34,9 @@ You then can use `./gemini-cli` with the following available arguments:
 # asking a question
 ./gemini-cli -a "What is sleep?"
 ./gemini-cli -a "Help, I can't sleep"
-
-# adding additional instructions
-./gemini-cli -i "Respond like an anime catgirl"
 ```
+
+To add additional instructions, configure `./config/instructions.json` to add and remove instructions.
 
 ## Requirements
 
