@@ -14,12 +14,6 @@ def handle_show_instructions(args: argparse.Namespace, gemini: GeminiInteract):
         print(f"{num}. {instruct}")
 
 
-def handle_add_instructions(args: argparse.Namespace, gemini: GeminiInteract):
-    instruction = " ".join(args.add_instruction)
-
-    gemini.instruct.append(instruction)
-
-
 def main():
     api_path = Path.cwd() / "api_key.txt"
     argument = ArgumentParse()
@@ -37,9 +31,6 @@ def main():
 
         elif args.show_instructions:
             handle_show_instructions(args, gemini)
-
-        elif args.add_instruction:
-            handle_add_instructions(args, gemini)
 
     except (FileNotFoundError, ValueError, Exception) as e:
         print(e)

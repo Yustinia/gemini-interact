@@ -1,6 +1,5 @@
 set allow-duplicate-recipes := true
 
-
 entry := "main.py"
 app_name := "gemini-cli"
 
@@ -29,4 +28,4 @@ clean:
 
 # Run python
 run *ARGS:
-    python3 {{entry}} {{ARGS}}
+    python {{entry}} {{ARGS}}

@@ -10,17 +10,22 @@ class ArgumentParse:
 
     def _setup_arguments(self):
         self.parser.add_argument(
-            "-a", "--ask", nargs="+", type=str, help="Ask question to Gemini"
+            "-a",
+            "--ask",
+            nargs="+",
+            type=str,
+            help="Ask question to Gemini",
         )
-        self.parser.add_argument("-k", "--keyfile", help="Set or update API key")
+        self.parser.add_argument(
+            "-k",
+            "--keyfile",
+            help="Set or update API key",
+        )
         self.parser.add_argument(
             "-s",
             "--show-instructions",
             action="store_true",
             help="Display AI instructions",
-        )
-        self.parser.add_argument(
-            "-i", "--add-instruction", nargs="+", help="Add additional AI instructions"
         )
 
     def parse_args(self) -> argparse.Namespace:
