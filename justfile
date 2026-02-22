@@ -7,15 +7,9 @@ app_name := "gemini-cli"
 default:
     just --list
 
-# Clean build for windows
-[windows]
-build:
-    pyinstaller {{entry}} --onefile --name {{app_name}}.exe
-
 # Clean build for linux/unix
-[linux]
 build:
-    pyinstaller {{entry}} --onefile --name {{app_name}}
+    pyinstaller {{entry}} --onefile --add-data config:config --name {{app_name}}
 
 # Clean then rebuild
 rebuild: clean build
